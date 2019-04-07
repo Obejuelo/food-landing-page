@@ -2,3 +2,44 @@
     font-size: 40px;
     font-weight: 300;
 }
+
+.dish-slide {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dish-slide img{
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+}
+
+.dish-slide .dish-info {
+    background: var(--main-primary);
+    position: relative;
+    padding: 20px 5px;
+    color: #fff;
+    width: 61%;
+    border-radius: 7px;
+    opacity: .85;
+    top: -65px;
+}
+
+.dish-slide .dish-info .subtitle {
+    font-size: 10px;
+}
+
+.dish-slide .dish-info p{
+    padding: 0;
+    margin: 0;
+}
+
+.dish-slide .dish-info a {
+    position: relative;
+    top: 5px !important;
+    text-decoration: none;
+    color: #fff;
+}
