@@ -14,7 +14,7 @@ export default function () {
                 <a className="menu-item" href="/desserts">Desserts</a>
             </Menu>
             <div className='sign-container'>
-                <span className='icon'>icon</span>
+                <span className='icon'><i className="fas fa-search"></i></span>
                 <button className='btn btn-sign btn-sm'>Sign In</button>
             </div>
         </div>

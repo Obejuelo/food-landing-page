@@ -1,7 +1,6 @@
 #root {
   --main-primary: #32AE2A; 
 }
-@import url('https://fonts.googleapis.com/css?family=Unna');
 
 * {
   padding: 0;
@@ -10,4 +9,5 @@
 
 body {
   overflow-x: hidden; 
+  font-family: "Open Sans";
 }

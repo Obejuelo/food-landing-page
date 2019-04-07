@@ -1,0 +1,9 @@
+.section h3 {
+    font-size: 40px;
+    font-weight: 300;
+}
+
+.section .info .view-menu{
+    background: var(--main-primary);
+    color: #fff;
+}
