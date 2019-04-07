@@ -1,0 +1,100 @@
+.nav{
+    position: fixed;
+    background: transparent;
+    width: 100%;
+    height: 56px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#page-wrap {
+    text-align: center;
+    /* Prevent sidebar from showing a scrollbar on page */
+    overflow: auto;
+}
+  
+  /* Individual item */
+.bm-item {
+    display: inline-block;
+    /* Our sidebar item styling */
+    text-decoration: none;
+    margin-bottom: 10px;
+    color: #fff;
+    transition: color 0.2s;
+}
+  
+  /* Change color on hover */
+.bm-item:hover {
+    color: white;
+}
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    top: 12px;
+    left: 10px;
+}
+
+.bm-burger-button:focus{
+    outline: none;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+    background: var(--main-primary);
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+    height: 24px;
+    width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+    background: #fff;
+}
+
+/* General sidebar styles */
+.bm-menu {
+    background: var(--main-primary);
+    padding: 2.5em 1.5em 0;
+    font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+    fill: var(--main-primary);
+    top: -28px;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+    color: #fff;
+    outline-offset: 0;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+    background: rgba(0, 0, 0, 0.3);
+    top: 0px;
+}
+
+.nav .sign-container {
+    margin-right: 10px;
+}
+
+.nav .sign-container .icon{
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.nav .sign-container .btn-sign {
+    background: var(--main-primary);
+    width: 70px;
+    color: #fff;
+}
