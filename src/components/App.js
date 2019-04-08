@@ -3,6 +3,7 @@ import Nav from './nav/Nav';
 import Header from './header/Header';
 import Welcome from './welcome/Welcome';
 import Popular from './popular/Popular';
+import Footer from './footer/Footer';
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
         <Header />
         <Welcome />
         <Popular />
+        <Footer />
       </div>
     );
   }

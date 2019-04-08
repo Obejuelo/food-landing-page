@@ -1,6 +1,8 @@
 import React from 'react';
 import './header.css';
 
+import ReactWOW from 'react-wow';
+
 export default function () {
     return (
         <header className='header'>
@@ -10,9 +12,11 @@ export default function () {
             </div>
             <div className='info'>
                 <div className="text">
-                    <h2>Feel Better Food</h2>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluatem accusantium doloremque laudam.</p>
-                    <button className='btn order-btn'>Order now</button>
+                    <ReactWOW animation='fadeIn' delay='0.5s' duration='1.5s'>
+                        <h2>Feel Better Food</h2>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluatem accusantium doloremque laudam.</p>
+                        <button className='btn order-btn'>Order now</button>
+                    </ReactWOW>
                 </div>
                 <div
                     className="slider"
