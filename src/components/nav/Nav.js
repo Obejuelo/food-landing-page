@@ -5,7 +5,9 @@ import { bubble as Menu } from 'react-burger-menu'
 
 class Nav extends Component {
     state = {
-        scroll: window.scrollY
+        scroll: window.scrollY,
+        searchShow: false,
+        searchText: ''
     }
 
     componentDidMount() {
@@ -16,21 +18,56 @@ class Nav extends Component {
         this.setState({ scroll: window.scrollY })
     }
 
+    // Method to change searchShow state
+    changeSearchShow = () => {
+        this.setState({ searchShow: !this.state.searchShow });
+    }
+
+    search = () => {
+        let input = document.getElementById('search');
+        input.addEventListener('keyup', (e) => {
+            if (e.keyCode === 13) {
+                this.changeSearchText();
+                console.log(this.state.searchText);
+            } else {
+                return
+            }
+        })
+    }
+
+    // Method to change searchText state
+    changeSearchText = () => {
+        let input = document.getElementById('search').value;
+        this.setState({ searchText: input });
+    }
+
+    // Method to change opacity of navBar
     setOpacity = () => {
         let op;
-        if (this.state.scroll > 50 & this.state.scroll < 245)
-            op = this.state.scroll / 250;
-        if (this.state.scroll < 50)
-            op = 0;
-        if (this.state.scroll > 245)
-            op = 1;
+        if (this.state.scroll > 50 & this.state.scroll < 245) op = this.state.scroll / 250;
+        if (this.state.scroll < 50) op = 0;
+        if (this.state.scroll > 245) op = 1;
         return op;
     }
 
+    // Method to add shadow to the navBar
     setShadow = () => {
         if (this.state.scroll > 250)
             return `0 2px 10px rgba(0,0,0,.2)`
         return '';
+    }
+
+    // Method to show or hide input search
+    renderSearch = () => {
+        if (this.state.searchShow) {
+            return <input
+                type="text"
+                name="search"
+                id="search"
+                onKeyUp={this.search}
+                placeholder='Search'
+                autoFocus />
+        }
     }
 
     render() {
@@ -48,7 +85,12 @@ class Nav extends Component {
                     <a className="menu-item" href="/desserts">Desserts</a>
                 </Menu>
                 <div className='sign-container'>
-                    <span className='icon'><i className="fas fa-search"></i></span>
+                    {this.renderSearch()}
+                    <span
+                        className='icon'
+                        onClick={this.changeSearchShow}>
+                        <i className="fas fa-search"></i>
+                    </span>
                     <button className='btn btn-sign btn-sm'>Sign In</button>
                 </div>
             </div>
