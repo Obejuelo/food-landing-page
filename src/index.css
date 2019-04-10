@@ -14,3 +14,11 @@ body {
   overflow-x: hidden; 
   font-family: "Open Sans";
 }
+
+.btn:active{
+  transform: scale(0.99);
+}
+
+.btn:focus,.btn:active:focus {
+    outline: none !important;
+}

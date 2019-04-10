@@ -5,7 +5,7 @@
     overflow: hidden;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
     z-index: 10;
 }
 
@@ -63,18 +63,31 @@
 .bm-menu {
     background: var(--main-primary);
     padding: 2.5em 1.5em 0;
-    font-size: 1.15em;
+    font-size: 1.5em;
 }
 /* Morph shape necessary with bubble or elastic */
 .bm-morph-shape {
     fill: var(--main-primary);
-    top: -28px;
+    /* top: -28px; */
 }
 
 /* Wrapper for item list */
 .bm-item-list {
-    color: #fff;
+    color: rgb(238, 238, 238) !important;
     outline-offset: 0;
+}
+
+.menu-item {
+    text-decoration: none !important;
+    color: rgb(212, 212, 212) !important;
+}
+
+.menu-item:hover{
+    color: #fff !important;
+}
+
+.bm-item:focus{
+    outline: var(--main-primary)
 }
 
 /* Styling of overlay */

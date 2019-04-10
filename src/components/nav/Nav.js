@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import './nav.css';
 
-import { bubble as Menu } from 'react-burger-menu'
+import { slide as Menu } from 'react-burger-menu'
+import LoginModal from '../loginModal/LoginModal';
 
 class Nav extends Component {
     state = {
         scroll: window.scrollY,
         searchShow: false,
-        searchText: ''
+        searchText: '',
+        signInModal: false
     }
 
     componentDidMount() {
@@ -41,6 +43,11 @@ class Nav extends Component {
         this.setState({ searchText: input });
     }
 
+    // Method to show modal sign in
+    changeShowModalSignIn = (value) => {
+        this.setState({ signInModal: value });
+    }
+
     // Method to change opacity of navBar
     setOpacity = () => {
         let op;
@@ -71,8 +78,9 @@ class Nav extends Component {
     }
 
     render() {
-        return (
+        return ([
             <div
+                key={1}
                 className="nav"
                 style={{
                     background: `rgba(255,255,255,${this.setOpacity()})`,
@@ -91,10 +99,18 @@ class Nav extends Component {
                         onClick={this.changeSearchShow}>
                         <i className="fas fa-search"></i>
                     </span>
-                    <button className='btn btn-sign btn-sm'>Sign In</button>
+                    <button
+                        className='btn btn-sign btn-sm'
+                        onClick={() => this.changeShowModalSignIn(true)}>
+                        Sign In
+                    </button>
                 </div>
-            </div>
-        )
+            </div>,
+            <LoginModal
+                key={2}
+                showModal={this.state.signInModal}
+                closeModal={this.changeShowModalSignIn} />
+        ])
     }
 }
 
