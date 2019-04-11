@@ -15,7 +15,7 @@
 
 .header .info {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     font-family: "Open Sans";
 }
@@ -40,10 +40,19 @@
 
 .header .info .slider{
     opacity: 1;
-    width: 60%;
+    width: 80%;
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     z-index: 2;
+}
+
+@media screen and (min-width: 366px) {
+    .header .info{
+        justify-content: space-between;
+    }
+    .header .info .slider {
+        width: 60%;
+    }
 }

@@ -3,6 +3,26 @@
     font-weight: 300;
 }
 
+.popular .li-sections {
+    width: 100%;
+}
+
+.popular .li-sections li{
+    display: inline-block;
+    margin-right: 10px;
+    list-style: none;
+    cursor: pointer;
+}
+
+.popular .li-sections li:focus-within{
+    color: var(--main-primary);
+}
+
+.popular .li-sections li:hover{
+    color: var(--main-primary);
+}
+
+
 .dish-slide {
     text-align: center !important;
     display: flex !important;
