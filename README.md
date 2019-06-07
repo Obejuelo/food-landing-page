@@ -1,4 +1,4 @@
-## Food landin page
+## Food landing page
 
 ## Available Scripts
 
