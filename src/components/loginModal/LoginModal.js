@@ -16,8 +16,10 @@ export default function ({ showModal, closeModal }) {
 
     function sendData(e) {
         e.preventDefault();
-        console.log(name);
-        console.log(pass);
+        
+        let body = {name,pass,}
+
+        console.log(body);
     }
 
     return (
