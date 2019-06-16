@@ -1,13 +1,13 @@
-.nav{
+/* .nav{
     position: fixed;
     width: 100%;
     height: 56px;
     overflow: hidden;
     display: flex;
     justify-content: space-between;
-    /* align-items: center; */
+    align-items: center;
     z-index: 10;
-}
+} */
 
 #page-wrap {
     text-align: center;

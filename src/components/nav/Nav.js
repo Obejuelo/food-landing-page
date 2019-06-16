@@ -84,7 +84,14 @@ class Nav extends Component {
                 className="nav"
                 style={{
                     background: `rgba(255,255,255,${this.setOpacity()})`,
-                    boxShadow: this.setShadow()
+                    boxShadow: this.setShadow(),
+                    position: 'fixed',
+                    width: '100%',
+                    height:' 56px',
+                    overflow: 'hidden',
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    zIndex: '10',
                 }}>
                 <Menu customBurgerIcon={<img src="assets/icons/burger.png" alt='' />}>
                     <a className="menu-item" href="/">Home</a>
